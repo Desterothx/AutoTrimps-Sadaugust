@@ -171,7 +171,7 @@ function initializeAllSettings() {
 		createSetting('TrapTrimps',
 			function () { return ('Trap Trimps') },
 			function () {
-				var description = "<p>Automatically builds traps and traps trimps when needed.</p>";
+				var description = "<p>Automatically builds traps and traps trimps when needed.JAS</p>";
 				description += "<p>Upgrade setting must be set to <b>Buy All Upgrades</b> for this to work</p>";
 				description += "<p><b>Recommended:</b> On whilst highest zone is below 30</p>";
 				return description;
