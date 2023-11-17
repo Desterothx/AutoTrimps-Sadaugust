@@ -181,7 +181,7 @@ function buyUpgrades() {
 	var upgradeSetting = getPageSetting('upgradeType');
 	if (upgradeSetting === 0) return;
 	if (calcHDratio() < 1){
-		upgradeSetting = 2
+		upgradeSetting = 2;
 	}
 	const upgradeList = populateUpgradeList();
 	for (var upgrade in upgradeList) {
