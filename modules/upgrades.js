@@ -180,7 +180,9 @@ function populateUpgradeList() {
 function buyUpgrades() {
 	var upgradeSetting = getPageSetting('upgradeType');
 	if (upgradeSetting === 0) return;
-
+	if (calcHDratio() < 1){
+		upgradeSetting = 2
+	}
 	const upgradeList = populateUpgradeList();
 	for (var upgrade in upgradeList) {
 		upgrade = upgradeList[upgrade];
@@ -190,7 +192,7 @@ function buyUpgrades() {
 		var fuckbuildinggiga = (bwRewardUnlocked("AutoStructure") && bwRewardUnlocked("DecaBuild") && getPageSetting('buildingsType') === 0);
 		if (upgrade === 'Coordination') {
 			//Coord & Amals
-			if (upgradeSetting === 2 || !canAffordCoordinationTrimps() || calcHDratio() < 1) continue;
+			if (upgradeSetting === 2 || !canAffordCoordinationTrimps()) continue;
 			//Skip coords if we have more than our designated cap otherwise buy jobs to ensure we fire enough workers for the coords we want to get.
 			if (challengeActive('Trappapalooza') || challengeActive('Trapper') && getPageSetting(trimpStats.currChallenge.toLowerCase())) {
 				if (getPageSetting(trimpStats.currChallenge.toLowerCase() + 'Coords') > 0 && game.upgrades.Coordination.done >= getPageSetting(trimpStats.currChallenge.toLowerCase() + 'Coords')) continue;
