@@ -1,7 +1,7 @@
 var atSettings = {
 	initialise: {
 		version: '',
-		basepath: 'https://SadAugust.github.io/AutoTrimps/',
+		basepath: 'https://desterothx.github.io/AutoTrimps-Sadaugust/',
 		loaded: false,
 	},
 	modules: {
