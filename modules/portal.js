@@ -235,7 +235,7 @@ function c2runnerportal(portalZone) {
 
 	if (portalZone <= 0) portalZone = Infinity;
 
-	if (game.global.world >= portalZone) {
+	if (game.global.world >= portalZone || (getZoneSeconds()>600)) {
 		finishChallengeSquared();
 		//Only portal automatically if using C2 Runner Pct input.
 		if (getPageSetting('c2RunnerStart') && getPageSetting('c2RunnerEndMode') === 1) {
